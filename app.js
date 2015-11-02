@@ -1,9 +1,9 @@
-var express = require("express");
-var app = express();
+// Vars
+var express = require("express"),
+	app = express();
 
-app.get('/', function (req, res){
-	res.write("Hello world !");
-});
+// Middleware
+app.use(express.static("public"));
 
 app.listen("3000", function(){
 	console.log("server listening on port 3000");
